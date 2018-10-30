@@ -1,0 +1,49 @@
+<center>
+  <h1>Burger Machines!</h1>
+</center>
+<div id="container">
+  <div id="burgers" style="float: left">
+
+    <h2>Burgers ready to be nommed!</h2>
+
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{else}}
+      {{burger_name}}
+      <button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">DEVOUR!
+      </button>
+      {{/if}}
+      {{/each}}
+    </ul>
+
+  </div>
+  <div id="eatenBurgers" style="float: left;">
+
+    <h2>Nommed up burgers!</h2>
+
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+        <ul>
+          {{burger}}
+        </ul>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<div>
+<center>
+  <h2>Add a Burger</h2>
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="burger_name">Burger Name:</label>
+      <input type="text" id="newBurger" name="newBurger">
+    </div>
+
+    <button type="submit">Add Burger</button>
+  </form>
+</center>
+</div>
