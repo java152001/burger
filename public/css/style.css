@@ -1,0 +1,17 @@
+head {
+    background-color: teal;
+}
+
+body {
+    background-color: teal;
+}
+
+#addBurger {
+    background-color: orange;
+    margin: 0 auto;
+    padding: 5px;
+    width: 60%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
