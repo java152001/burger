@@ -35,6 +35,8 @@ var orm = {
     insertOne: function(tableInput, colToAddTo, valToAdd, cb) {
         colToAddTo = colToAddTo.toString();
         var queryString = "INSERT INTO " + tableInput + " (" + colToAddTo + ") VALUES (?,?)";
+        console.log(queryString);
+        console.log(valToAdd);
         connection.query(queryString, valToAdd, function(err, result) {
             if (err) {
                 throw err;
